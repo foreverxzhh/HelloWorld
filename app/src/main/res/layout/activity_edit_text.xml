@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp">
+
+    <EditText
+        android:id="@+id/usr"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="15dp"
+        android:background="@drawable/edit"
+        android:drawableLeft="@mipmap/ic_launcher"
+        android:drawablePadding="15dp"
+        android:hint="请输入用户名"
+        android:padding="15dp"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/pwd"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/usr"
+        android:layout_margin="15dp"
+        android:background="@drawable/edit"
+        android:drawableLeft="@mipmap/ic_launcher"
+        android:drawablePadding="15dp"
+        android:hint="请输入密码"
+        android:inputType="numberPassword"
+        android:padding="15dp"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pwd"
+        android:layout_margin="50dp"
+        android:background="@drawable/button"
+        android:text="登录"
+        android:textColor="#ffffff"
+        android:textSize="20sp" />
+
+</RelativeLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="15dp">
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/textview"
+        android:drawableStart="@mipmap/ic_launcher_round"
+        android:drawablePadding="15dp"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        android:text="这是一段很长的测试文字"
+        android:textColor="#f000f0"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/textview"
+        android:drawableStart="@mipmap/ic_launcher_round"
+        android:drawablePadding="15dp"
+        android:ellipsize="middle"
+        android:singleLine="true"
+        android:text="这是一段很长的测试文字"
+        android:textColor="#00f0f0"
+        android:textSize="25sp" />
+
+</LinearLayout>
