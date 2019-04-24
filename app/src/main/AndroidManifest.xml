@@ -10,8 +10,11 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".gridview.GridViewActivity"></activity>
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <!--解决ERR_CLEARTEXT_NOT_PERMITTED问题-->
+        <activity android:name=".WebViewActivity"></activity>
+        <activity android:name=".gridview.GridViewActivity" />
         <activity android:name=".listview.ListViewActivity" />
         <activity android:name=".ImageViewActivity" />
         <activity android:name=".CheckBoxActivity" />
