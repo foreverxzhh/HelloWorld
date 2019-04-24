@@ -6,9 +6,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.hua.helloworld.listview.ListViewActivity;
+
 public class MainActivity extends AppCompatActivity {
 
-    private Button textview, button, edittext, radiobutton, checkbox, imageview;
+    private Button textview, button, edittext, radiobutton, checkbox, imageview, listview;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         radiobutton = findViewById(R.id.radiobutton);
         checkbox = findViewById(R.id.checkbox);
         imageview = findViewById(R.id.imageview);
+        listview = findViewById(R.id.listview);
         setOnClickListener();
     }
 
@@ -31,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         radiobutton.setOnClickListener(mOnclickListener);
         checkbox.setOnClickListener(mOnclickListener);
         imageview.setOnClickListener(mOnclickListener);
+        listview.setOnClickListener(mOnclickListener);
     }
 
     private class onClickListener implements View.OnClickListener {
@@ -49,13 +53,16 @@ public class MainActivity extends AppCompatActivity {
                     intent = new Intent(MainActivity.this, EditTextActivity.class);
                     break;
                 case R.id.radiobutton:
-                    intent= new Intent(MainActivity.this, RadioButtonActivity.class);
+                    intent = new Intent(MainActivity.this, RadioButtonActivity.class);
                     break;
                 case R.id.checkbox:
-                    intent= new Intent(MainActivity.this, CheckBoxActivity.class);
+                    intent = new Intent(MainActivity.this, CheckBoxActivity.class);
                     break;
                 case R.id.imageview:
-                    intent= new Intent(MainActivity.this, ImageViewActivity.class);
+                    intent = new Intent(MainActivity.this, ImageViewActivity.class);
+                    break;
+                case R.id.listview:
+                    intent = new Intent(MainActivity.this, ListViewActivity.class);
                     break;
             }
             startActivity(intent);
