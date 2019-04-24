@@ -1,4 +1,4 @@
-package com.hua.helloworld.listview;
+package com.hua.helloworld.gridview;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -11,20 +11,19 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.hua.helloworld.R;
 
-public class MyListViewAdapter extends BaseAdapter {
-
+public class MyGridViewAdapter extends BaseAdapter {
     private Context mContext;
     private LayoutInflater layoutInflater;
 
-    public MyListViewAdapter(Context context)
+    public MyGridViewAdapter(Context context)
     {
-        mContext = context;
+        this.mContext = context;
         layoutInflater = LayoutInflater.from(context);
     }
 
     @Override
     public int getCount() {
-        return 10;
+        return 12;
     }
 
     @Override
@@ -37,33 +36,29 @@ public class MyListViewAdapter extends BaseAdapter {
         return 0;
     }
 
-    static class ViewHandler
+    class ViewHolder
     {
         public ImageView iv;
-        public TextView tv1, tv2, tv3;
+        public TextView tv;
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        ViewHandler vh = null;
+        ViewHolder vh = null;
         if(convertView == null)
         {
-            convertView = layoutInflater.inflate(R.layout.list_item,null);
-            vh = new ViewHandler();
+            convertView = layoutInflater.inflate(R.layout.grid_item,null);
+            vh = new ViewHolder();
             vh.iv = convertView.findViewById(R.id.iv);
-            vh.tv1 = convertView.findViewById(R.id.tv1);
-            vh.tv2 = convertView.findViewById(R.id.tv2);
-            vh.tv3 = convertView.findViewById(R.id.tv3);
+            vh.tv = convertView.findViewById(R.id.tv);
             convertView.setTag(vh);
         }
         else
         {
-            vh = (ViewHandler) convertView.getTag();
+            vh = (ViewHolder) convertView.getTag();
         }
-        Glide.with(mContext).load("https://www.baidu.com/img/bd_logo1.png").into(vh.iv);
-        vh.tv1.setText("这是标题");
-        vh.tv2.setText("2019-04-24");
-        vh.tv3.setText("这是内容");
+        Glide.with(mContext).load("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1556109317772&di=fc98aca9ed600de2f8eb044d947b2f48&imgtype=0&src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farticle%2Fd6ed6cb561c5ae3230c7ee87ef62e36f44fe5448.jpg").into(vh.iv);
+        vh.tv.setText("独角兽");
         return convertView;
     }
 }
