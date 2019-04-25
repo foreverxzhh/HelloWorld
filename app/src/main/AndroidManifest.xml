@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".recyclerview.LinearActivity"></activity>
+        <activity android:name=".recyclerview.HorLinearActivity"></activity>
+        <activity android:name=".recyclerview.LinearActivity" />
         <activity android:name=".recyclerview.RecyclerActivity" /> <!-- 解决ERR_CLEARTEXT_NOT_PERMITTED问题 -->
         <activity android:name=".WebViewActivity" />
         <activity android:name=".gridview.GridViewActivity" />

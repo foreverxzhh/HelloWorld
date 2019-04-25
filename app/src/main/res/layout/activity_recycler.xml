@@ -16,4 +16,15 @@
         android:textColor="#ffffff"
         android:textSize="15sp" />
 
+    <Button
+        android:id="@+id/linear_hor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@drawable/button"
+        android:text="水平列表展示"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:textSize="15sp" />
+
 </LinearLayout>
