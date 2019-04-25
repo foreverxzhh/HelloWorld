@@ -10,10 +10,11 @@ import android.widget.Toast;
 
 import com.hua.helloworld.gridview.GridViewActivity;
 import com.hua.helloworld.listview.ListViewActivity;
+import com.hua.helloworld.recyclerview.RecyclerActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button textview, button, edittext, radiobutton, checkbox, imageview, listview, gridview, webview;
+    private Button textview, button, edittext, radiobutton, checkbox, imageview, listview, gridview, webview, recyclerview;
     private long time = 0;
 
     @Override
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         listview = findViewById(R.id.listview);
         gridview = findViewById(R.id.gridview);
         webview = findViewById(R.id.webview);
+        recyclerview = findViewById(R.id.recyclerview);
         setOnClickListener();
     }
 
@@ -43,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         listview.setOnClickListener(mOnclickListener);
         gridview.setOnClickListener(mOnclickListener);
         webview.setOnClickListener(mOnclickListener);
+        recyclerview.setOnClickListener(mOnclickListener);
     }
 
     private class onClickListener implements View.OnClickListener {
@@ -74,8 +77,13 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.gridview:
                     intent = new Intent(MainActivity.this, GridViewActivity.class);
+                    break;
                 case R.id.webview:
                     intent = new Intent(MainActivity.this, WebViewActivity.class);
+                    break;
+                case R.id.recyclerview:
+                    intent = new Intent(MainActivity.this, RecyclerActivity.class);
+                    break;
             }
             startActivity(intent);
         }

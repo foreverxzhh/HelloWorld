@@ -12,8 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <!--解决ERR_CLEARTEXT_NOT_PERMITTED问题-->
-        <activity android:name=".WebViewActivity"></activity>
+        <activity android:name=".recyclerview.LinearActivity"></activity>
+        <activity android:name=".recyclerview.RecyclerActivity" /> <!-- 解决ERR_CLEARTEXT_NOT_PERMITTED问题 -->
+        <activity android:name=".WebViewActivity" />
         <activity android:name=".gridview.GridViewActivity" />
         <activity android:name=".listview.ListViewActivity" />
         <activity android:name=".ImageViewActivity" />

@@ -109,6 +109,17 @@
             android:textColor="#ffffff"
             android:textSize="15sp" />
 
+        <Button
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="@drawable/button"
+            android:text="RecyclerView"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textSize="15sp" />
+
         <HorizontalScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
