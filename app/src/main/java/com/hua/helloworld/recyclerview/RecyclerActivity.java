@@ -10,7 +10,7 @@ import com.hua.helloworld.R;
 
 public class RecyclerActivity extends AppCompatActivity {
 
-    private Button linear,horlinear;
+    private Button linear,horlinear,stage;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +28,14 @@ public class RecyclerActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(RecyclerActivity.this,HorLinearActivity.class);
+                startActivity(intent);
+            }
+        });
+        stage = findViewById(R.id.stage);
+        stage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(RecyclerActivity.this,StageActivity.class);
                 startActivity(intent);
             }
         });
