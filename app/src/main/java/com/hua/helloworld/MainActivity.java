@@ -14,7 +14,7 @@ import com.hua.helloworld.recyclerview.RecyclerActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button textview, button, edittext, radiobutton, checkbox, imageview, listview, gridview, webview, recyclerview;
+    private Button textview, button, edittext, radiobutton, checkbox, imageview, listview, gridview, webview, recyclerview, toast,alertdialog;
     private long time = 0;
 
     @Override
@@ -31,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
         gridview = findViewById(R.id.gridview);
         webview = findViewById(R.id.webview);
         recyclerview = findViewById(R.id.recyclerview);
+        toast = findViewById(R.id.toast);
+        alertdialog = findViewById(R.id.alertdialog);
         setOnClickListener();
     }
 
@@ -46,6 +48,8 @@ public class MainActivity extends AppCompatActivity {
         gridview.setOnClickListener(mOnclickListener);
         webview.setOnClickListener(mOnclickListener);
         recyclerview.setOnClickListener(mOnclickListener);
+        toast.setOnClickListener(mOnclickListener);
+        alertdialog.setOnClickListener(mOnclickListener);
     }
 
     private class onClickListener implements View.OnClickListener {
@@ -83,6 +87,12 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.recyclerview:
                     intent = new Intent(MainActivity.this, RecyclerActivity.class);
+                    break;
+                case R.id.toast:
+                    intent = new Intent(MainActivity.this, ToastActivity.class);
+                    break;
+                case R.id.alertdialog:
+                    intent = new Intent(MainActivity.this, AlertDialogActivity.class);
                     break;
             }
             startActivity(intent);
