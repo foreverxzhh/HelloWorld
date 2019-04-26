@@ -14,7 +14,7 @@ import com.hua.helloworld.recyclerview.RecyclerActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button textview, button, edittext, radiobutton, checkbox, imageview, listview, gridview, webview, recyclerview, toast,alertdialog;
+    private Button textview, button, edittext, radiobutton, checkbox, imageview, listview, gridview, webview, recyclerview, toast,alertdialog, progress;
     private long time = 0;
 
     @Override
@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerview = findViewById(R.id.recyclerview);
         toast = findViewById(R.id.toast);
         alertdialog = findViewById(R.id.alertdialog);
+        progress = findViewById(R.id.progress);
         setOnClickListener();
     }
 
@@ -50,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerview.setOnClickListener(mOnclickListener);
         toast.setOnClickListener(mOnclickListener);
         alertdialog.setOnClickListener(mOnclickListener);
+        progress.setOnClickListener(mOnclickListener);
     }
 
     private class onClickListener implements View.OnClickListener {
@@ -93,6 +95,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.alertdialog:
                     intent = new Intent(MainActivity.this, AlertDialogActivity.class);
+                    break;
+                case R.id.progress:
+                    intent = new Intent(MainActivity.this, ProgressActivity.class);
                     break;
             }
             startActivity(intent);

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:background="#0098CA">
+    <ProgressBar
+        android:id="@+id/p1"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        style="@style/Widget.AppCompat.ProgressBar"/>
+
+    <ProgressBar
+        android:id="@+id/p2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+
+    <ProgressBar
+        android:id="@+id/p3"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:indeterminateDrawable="@drawable/progress"/>
+
+    <Button
+        android:id="@+id/download"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@drawable/button"
+        android:text="Download"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/progressdialog1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@drawable/button"
+        android:text="ProgressDialog演示1"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/progressdialog2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@drawable/button"
+        android:text="ProgressDialog演示2"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:textSize="15sp" />
+</LinearLayout>
