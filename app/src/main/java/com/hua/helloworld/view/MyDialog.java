@@ -33,8 +33,10 @@ public class MyDialog extends Dialog implements View.OnClickListener {
         d.getSize(size);
         p.width = (int)(size.x*0.8);
         getWindow().setAttributes(p);
+        //调整弹窗大小
 
         getWindow().setBackgroundDrawableResource(android.R.color.transparent);
+        //设置弹窗背景透明，不然无法实现圆角效果
 
         title = findViewById(R.id.title);
         content = findViewById(R.id.content);
