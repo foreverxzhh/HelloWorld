@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ProgressActivity"></activity>
+        <activity android:name=".DialogActivity"></activity>
+        <activity android:name=".ProgressActivity" />
         <activity android:name=".AlertDialogActivity" />
         <activity android:name=".ToastActivity" />
         <activity android:name=".recyclerview.StageActivity" />
