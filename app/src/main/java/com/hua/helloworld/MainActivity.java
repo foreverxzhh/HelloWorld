@@ -1,6 +1,7 @@
 package com.hua.helloworld;
 
 import android.content.Intent;
+import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -8,13 +9,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.hua.helloworld.fragment.ContainerActivity;
 import com.hua.helloworld.gridview.GridViewActivity;
 import com.hua.helloworld.listview.ListViewActivity;
 import com.hua.helloworld.recyclerview.RecyclerActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button textview, button, edittext, radiobutton, checkbox, imageview, listview, gridview, webview, recyclerview, toast,alertdialog, progress, dialog, popup;
+    private Button textview, button, edittext, radiobutton, checkbox, imageview, listview, gridview, webview, recyclerview, toast,alertdialog, progress, dialog, popup, fragment;
     private long time = 0;
 
     @Override
@@ -36,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         progress = findViewById(R.id.progress);
         dialog = findViewById(R.id.dialog);
         popup = findViewById(R.id.popup);
+        fragment = findViewById(R.id.fragment);
         setOnClickListener();
     }
 
@@ -56,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
         progress.setOnClickListener(mOnclickListener);
         dialog.setOnClickListener(mOnclickListener);
         popup.setOnClickListener(mOnclickListener);
+        fragment.setOnClickListener(mOnclickListener);
     }
 
     private class onClickListener implements View.OnClickListener {
@@ -108,6 +112,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.popup:
                     intent = new Intent(MainActivity.this, PopupActivity.class);
+                    break;
+                case R.id.fragment:
+                    intent = new Intent(MainActivity.this, ContainerActivity.class);
                     break;
             }
             startActivity(intent);

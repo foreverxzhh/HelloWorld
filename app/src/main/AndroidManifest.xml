@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".PopupActivity"></activity>
+        <activity android:name=".fragment.ContainerActivity"></activity>
+        <activity android:name=".PopupActivity" />
         <activity android:name=".DialogActivity" />
         <activity android:name=".ProgressActivity" />
         <activity android:name=".AlertDialogActivity" />
