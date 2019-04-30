@@ -1,31 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:padding="15dp">
 
+    <EditText
+        android:id="@+id/et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入内容"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="演示" />
+
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/save"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
         android:background="@drawable/button"
-        android:text="Button1"
+        android:text="存储"
         android:textAllCaps="false"
         android:textColor="#ffffff"
         android:textSize="15sp" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/display"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/button1"
         android:layout_margin="15dp"
         android:background="@drawable/button"
-        android:text="Button2"
+        android:text="显示"
         android:textAllCaps="false"
         android:textColor="#ffffff"
-        android:textSize="15sp"
-        android:onClick="showToast" />
+        android:textSize="15sp" />
 
-</RelativeLayout>
+</LinearLayout>

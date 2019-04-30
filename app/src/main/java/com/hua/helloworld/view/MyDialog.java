@@ -16,7 +16,7 @@ public class MyDialog extends Dialog implements View.OnClickListener {
     private String title1, content1;
     private OnClickListener mOnClickListener;
 
-    public MyDialog(Context context,OnClickListener listener) {
+    public MyDialog(Context context, OnClickListener listener) {
         super(context);
         mOnClickListener = listener;
     }
@@ -31,7 +31,7 @@ public class MyDialog extends Dialog implements View.OnClickListener {
         WindowManager.LayoutParams p = getWindow().getAttributes();
         Point size = new Point();
         d.getSize(size);
-        p.width = (int)(size.x*0.8);
+        p.width = (int) (size.x * 0.8);
         getWindow().setAttributes(p);
         //调整弹窗大小
 
@@ -44,28 +44,25 @@ public class MyDialog extends Dialog implements View.OnClickListener {
         btn2 = findViewById(R.id.btn2);
         btn1.setOnClickListener(this);
         btn2.setOnClickListener(this);
-        if(title != null)
+        if (title != null)
             title.setText(title1);
-        if(content != null)
+        if (content != null)
             content.setText(content1);
     }
 
-    public MyDialog setTitle(String string)
-    {
+    public MyDialog setTitle(String string) {
         title1 = string;
         return this;
     }
 
-    public MyDialog setContent(String string)
-    {
+    public MyDialog setContent(String string) {
         content1 = string;
         return this;
     }
 
     @Override
     public void onClick(View v) {
-        switch (v.getId())
-        {
+        switch (v.getId()) {
             case R.id.btn1:
                 mOnClickListener.onClick(v, this);
                 break;
@@ -75,8 +72,7 @@ public class MyDialog extends Dialog implements View.OnClickListener {
         }
     }
 
-    public interface OnClickListener
-    {
+    public interface OnClickListener {
         void onClick(View v, MyDialog myDialog);
     }
 }

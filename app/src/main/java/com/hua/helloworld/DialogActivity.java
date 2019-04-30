@@ -23,8 +23,7 @@ public class DialogActivity extends AppCompatActivity {
                 MyDialog dl = new MyDialog(DialogActivity.this, new MyDialog.OnClickListener() {
                     @Override
                     public void onClick(View v, MyDialog myDialog) {
-                        switch (v.getId())
-                        {
+                        switch (v.getId()) {
                             case R.id.btn1:
                                 Toast.makeText(DialogActivity.this, "确定", Toast.LENGTH_SHORT).show();
                                 myDialog.dismiss();

@@ -1,7 +1,8 @@
 package com.hua.helloworld;
 
+import android.Manifest;
 import android.content.Intent;
-import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -13,10 +14,14 @@ import com.hua.helloworld.fragment.ContainerActivity;
 import com.hua.helloworld.gridview.GridViewActivity;
 import com.hua.helloworld.listview.ListViewActivity;
 import com.hua.helloworld.recyclerview.RecyclerActivity;
+import com.hua.helloworld.storage.Storage2Activity;
+import com.hua.helloworld.storage.Storage3Activity;
+import com.hua.helloworld.storage.StorageActivity;
+
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button textview, button, edittext, radiobutton, checkbox, imageview, listview, gridview, webview, recyclerview, toast,alertdialog, progress, dialog, popup, fragment;
+    private Button textview, button, edittext, radiobutton, checkbox, imageview, listview, gridview, webview, recyclerview, toast, alertdialog, progress, dialog, popup, fragment, storage, storage2, storage3;
     private long time = 0;
 
     @Override
@@ -39,7 +44,11 @@ public class MainActivity extends AppCompatActivity {
         dialog = findViewById(R.id.dialog);
         popup = findViewById(R.id.popup);
         fragment = findViewById(R.id.fragment);
+        storage = findViewById(R.id.storage);
+        storage2 = findViewById(R.id.storage2);
+        storage3 = findViewById(R.id.storage3);
         setOnClickListener();
+        ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
     }
 
     private void setOnClickListener() {
@@ -60,6 +69,9 @@ public class MainActivity extends AppCompatActivity {
         dialog.setOnClickListener(mOnclickListener);
         popup.setOnClickListener(mOnclickListener);
         fragment.setOnClickListener(mOnclickListener);
+        storage.setOnClickListener(mOnclickListener);
+        storage2.setOnClickListener(mOnclickListener);
+        storage3.setOnClickListener(mOnclickListener);
     }
 
     private class onClickListener implements View.OnClickListener {
@@ -116,6 +128,15 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.fragment:
                     intent = new Intent(MainActivity.this, ContainerActivity.class);
                     break;
+                case R.id.storage:
+                    intent = new Intent(MainActivity.this, StorageActivity.class);
+                    break;
+                case R.id.storage2:
+                    intent = new Intent(MainActivity.this, Storage2Activity.class);
+                    break;
+                case R.id.storage3:
+                    intent = new Intent(MainActivity.this, Storage3Activity.class);
+                    break;
             }
             startActivity(intent);
         }
@@ -123,10 +144,8 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if(keyCode == KeyEvent.KEYCODE_BACK)
-        {
-            if(System.currentTimeMillis() - time > 2000)
-            {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            if (System.currentTimeMillis() - time > 2000) {
                 time = System.currentTimeMillis();
                 Toast.makeText(this, "再次点击返回键退出。", Toast.LENGTH_SHORT).show();
                 return true;

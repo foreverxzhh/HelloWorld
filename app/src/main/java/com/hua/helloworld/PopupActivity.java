@@ -21,8 +21,8 @@ public class PopupActivity extends AppCompatActivity {
         popup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                View view = LayoutInflater.from(PopupActivity.this).inflate(R.layout.pop,null);
-                pw = new PopupWindow(view,popup.getWidth(), ViewGroup.LayoutParams.WRAP_CONTENT);
+                View view = LayoutInflater.from(PopupActivity.this).inflate(R.layout.pop, null);
+                pw = new PopupWindow(view, popup.getWidth(), ViewGroup.LayoutParams.WRAP_CONTENT);
                 pw.setFocusable(true);
                 pw.setOutsideTouchable(true);
                 pw.showAsDropDown(popup);

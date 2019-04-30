@@ -14,6 +14,7 @@ import com.hua.helloworld.R;
 public class LinearActivity extends AppCompatActivity {
 
     RecyclerView rv;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,7 +25,7 @@ public class LinearActivity extends AppCompatActivity {
             @Override
             public void getItemOffsets(@NonNull Rect outRect, @NonNull View view, @NonNull RecyclerView parent, @NonNull RecyclerView.State state) {
                 super.getItemOffsets(outRect, view, parent, state);
-                outRect.set(0,0,0,1);
+                outRect.set(0, 0, 0, 1);
             }
         });
         rv.setAdapter(new LinearAdapter(this, new LinearAdapter.OnItemClickListener() {

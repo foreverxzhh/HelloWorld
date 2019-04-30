@@ -16,8 +16,7 @@ public class MyListViewAdapter extends BaseAdapter {
     private Context mContext;
     private LayoutInflater layoutInflater;
 
-    public MyListViewAdapter(Context context)
-    {
+    public MyListViewAdapter(Context context) {
         mContext = context;
         layoutInflater = LayoutInflater.from(context);
     }
@@ -37,8 +36,7 @@ public class MyListViewAdapter extends BaseAdapter {
         return 0;
     }
 
-    static class ViewHandler
-    {
+    static class ViewHandler {
         public ImageView iv;
         public TextView tv1, tv2, tv3;
     }
@@ -46,18 +44,15 @@ public class MyListViewAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         ViewHandler vh = null;
-        if(convertView == null)
-        {
-            convertView = layoutInflater.inflate(R.layout.list_item,null);
+        if (convertView == null) {
+            convertView = layoutInflater.inflate(R.layout.list_item, null);
             vh = new ViewHandler();
             vh.iv = convertView.findViewById(R.id.iv);
             vh.tv1 = convertView.findViewById(R.id.tv1);
             vh.tv2 = convertView.findViewById(R.id.tv2);
             vh.tv3 = convertView.findViewById(R.id.tv3);
             convertView.setTag(vh);
-        }
-        else
-        {
+        } else {
             vh = (ViewHandler) convertView.getTag();
         }
         Glide.with(mContext).load("https://www.baidu.com/img/bd_logo1.png").into(vh.iv);

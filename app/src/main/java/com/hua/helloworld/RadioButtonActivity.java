@@ -20,7 +20,7 @@ public class RadioButtonActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 rb = findViewById(checkedId);
-                Toast.makeText(RadioButtonActivity.this, ""+rb.getText().toString(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(RadioButtonActivity.this, "" + rb.getText().toString(), Toast.LENGTH_SHORT).show();
             }
         });
     }

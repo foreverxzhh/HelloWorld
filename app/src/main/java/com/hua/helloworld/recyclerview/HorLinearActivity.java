@@ -15,6 +15,7 @@ import com.hua.helloworld.R;
 public class HorLinearActivity extends AppCompatActivity {
 
     private RecyclerView rv;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,22 +28,21 @@ public class HorLinearActivity extends AppCompatActivity {
         rv.setAdapter(new HorLinearAdapter(HorLinearActivity.this, new HorLinearAdapter.OnItemClickListener() {
             @Override
             public void onClick(int pos) {
-                Toast.makeText(HorLinearActivity.this, "点击pos:"+pos, Toast.LENGTH_SHORT).show();
+                Toast.makeText(HorLinearActivity.this, "点击pos:" + pos, Toast.LENGTH_SHORT).show();
             }
         }, new HorLinearAdapter.OnItemLongClickListener() {
             @Override
             public void onClick(int pos) {
-                Toast.makeText(HorLinearActivity.this, "长按pos:"+pos, Toast.LENGTH_SHORT).show();
+                Toast.makeText(HorLinearActivity.this, "长按pos:" + pos, Toast.LENGTH_SHORT).show();
             }
         }));
     }
 
-    class MyDecoration extends RecyclerView.ItemDecoration
-    {
+    class MyDecoration extends RecyclerView.ItemDecoration {
         @Override
         public void getItemOffsets(@NonNull Rect outRect, @NonNull View view, @NonNull RecyclerView parent, @NonNull RecyclerView.State state) {
             super.getItemOffsets(outRect, view, parent, state);
-            outRect.set(0,0,1,0);
+            outRect.set(0, 0, 1, 0);
         }
     }
 }

@@ -24,20 +24,17 @@ public class ContainerActivity extends AppCompatActivity implements AFragment.IC
             @Override
             public void onClick(View v) {
                 count++;
-                if(count%2 == 0)
-                {
-                    getFragmentManager().beginTransaction().replace(R.id.container,fa).commitAllowingStateLoss();
-                }
-                else
-                {
-                    if(fb == null)
+                if (count % 2 == 0) {
+                    getFragmentManager().beginTransaction().replace(R.id.container, fa).commitAllowingStateLoss();
+                } else {
+                    if (fb == null)
                         fb = BFragment.getInstance("测试B");
-                    getFragmentManager().beginTransaction().replace(R.id.container,fb).commitAllowingStateLoss();
+                    getFragmentManager().beginTransaction().replace(R.id.container, fb).commitAllowingStateLoss();
                 }
             }
         });
         fa = AFragment.getInstance("测试A");
-        getFragmentManager().beginTransaction().add(R.id.container,fa, "a").commitAllowingStateLoss();
+        getFragmentManager().beginTransaction().add(R.id.container, fa, "a").commitAllowingStateLoss();
     }
 
     @Override

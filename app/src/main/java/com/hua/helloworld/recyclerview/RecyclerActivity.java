@@ -10,7 +10,8 @@ import com.hua.helloworld.R;
 
 public class RecyclerActivity extends AppCompatActivity {
 
-    private Button linear,horlinear,stage;
+    private Button linear, horlinear, stage;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,7 +20,7 @@ public class RecyclerActivity extends AppCompatActivity {
         linear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(RecyclerActivity.this,LinearActivity.class);
+                Intent intent = new Intent(RecyclerActivity.this, LinearActivity.class);
                 startActivity(intent);
             }
         });
@@ -27,7 +28,7 @@ public class RecyclerActivity extends AppCompatActivity {
         horlinear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(RecyclerActivity.this,HorLinearActivity.class);
+                Intent intent = new Intent(RecyclerActivity.this, HorLinearActivity.class);
                 startActivity(intent);
             }
         });
@@ -35,7 +36,7 @@ public class RecyclerActivity extends AppCompatActivity {
         stage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(RecyclerActivity.this,StageActivity.class);
+                Intent intent = new Intent(RecyclerActivity.this, StageActivity.class);
                 startActivity(intent);
             }
         });

@@ -17,8 +17,7 @@ public class HorLinearAdapter extends RecyclerView.Adapter<HorLinearAdapter.MyRe
     private OnItemClickListener mOnItemClickListener;
     private OnItemLongClickListener mOnItemLongClickListener;
 
-    HorLinearAdapter(Context context, OnItemClickListener onItemClickListener, OnItemLongClickListener onItemLongClickListener)
-    {
+    HorLinearAdapter(Context context, OnItemClickListener onItemClickListener, OnItemLongClickListener onItemLongClickListener) {
         mContext = context;
         mOnItemClickListener = onItemClickListener;
         mOnItemLongClickListener = onItemLongClickListener;
@@ -54,10 +53,10 @@ public class HorLinearAdapter extends RecyclerView.Adapter<HorLinearAdapter.MyRe
         return 30;
     }
 
-    class MyRecylerView extends RecyclerView.ViewHolder
-    {
+    class MyRecylerView extends RecyclerView.ViewHolder {
         ImageView iv;
         TextView tv;
+
         public MyRecylerView(@NonNull View itemView) {
             super(itemView);
             iv = itemView.findViewById(R.id.iv);
@@ -65,12 +64,11 @@ public class HorLinearAdapter extends RecyclerView.Adapter<HorLinearAdapter.MyRe
         }
     }
 
-    public interface OnItemClickListener
-    {
+    public interface OnItemClickListener {
         void onClick(int pos);
     }
-    public interface OnItemLongClickListener
-    {
+
+    public interface OnItemLongClickListener {
         void onClick(int pos);
     }
 }

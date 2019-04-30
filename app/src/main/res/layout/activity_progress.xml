@@ -5,24 +5,25 @@
     android:orientation="vertical"
     android:padding="15dp"
     android:background="#0098CA">
+
     <ProgressBar
         android:id="@+id/p1"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        style="@style/Widget.AppCompat.ProgressBar"/>
+        style="@style/Widget.AppCompat.ProgressBar" />
 
     <ProgressBar
         android:id="@+id/p2"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal" />
 
     <ProgressBar
         android:id="@+id/p3"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         style="@style/Widget.AppCompat.ProgressBar"
-        android:indeterminateDrawable="@drawable/progress"/>
+        android:indeterminateDrawable="@drawable/progress" />
 
     <Button
         android:id="@+id/download"

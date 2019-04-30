@@ -11,12 +11,12 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:text="Android"
-        android:layout_margin="15dp"/>
+        android:layout_margin="15dp" />
 
     <CheckBox
         android:id="@+id/cb2"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:text="IOS"
-        android:layout_margin="15dp"/>
+        android:layout_margin="15dp" />
 </LinearLayout>

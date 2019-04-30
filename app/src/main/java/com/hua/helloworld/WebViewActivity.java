@@ -24,8 +24,7 @@ public class WebViewActivity extends AppCompatActivity {
         wv.loadUrl("https://m.baidu.com");
     }
 
-    class MyWebViewClient extends WebViewClient
-    {
+    class MyWebViewClient extends WebViewClient {
         @Override
         public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
             view.loadUrl(request.getUrl().toString());
@@ -35,8 +34,7 @@ public class WebViewActivity extends AppCompatActivity {
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if(keyCode == KeyEvent.KEYCODE_BACK && wv.canGoBack())
-        {
+        if (keyCode == KeyEvent.KEYCODE_BACK && wv.canGoBack()) {
             wv.goBack();
             return true;
         }

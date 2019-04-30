@@ -28,8 +28,7 @@ public class AlertDialogActivity extends AppCompatActivity {
 
     }
 
-    void setOnClickListener()
-    {
+    void setOnClickListener() {
         MyListener ml = new MyListener();
         btn1.setOnClickListener(ml);
         btn2.setOnClickListener(ml);
@@ -38,13 +37,11 @@ public class AlertDialogActivity extends AppCompatActivity {
         btn5.setOnClickListener(ml);
     }
 
-    class MyListener implements View.OnClickListener
-    {
+    class MyListener implements View.OnClickListener {
 
         @Override
         public void onClick(View v) {
-            switch (v.getId())
-            {
+            switch (v.getId()) {
                 case R.id.aleartdialog1:
                     AlertDialog.Builder builder = new AlertDialog.Builder(AlertDialogActivity.this);//注意这里context要传Activity的
                     builder.setTitle("请选择你的性别")
@@ -71,13 +68,12 @@ public class AlertDialogActivity extends AppCompatActivity {
                     break;
                 case R.id.aleartdialog2:
                     AlertDialog.Builder builder1 = new AlertDialog.Builder(AlertDialogActivity.this);
-                    String item[] = {"上","中","下"};
+                    String item[] = {"上", "中", "下"};
                     builder1.setTitle("你打哪一路？")
                             .setItems(item, new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
-                                    switch(which)
-                                    {
+                                    switch (which) {
                                         case 0:
                                             Toast.makeText(AlertDialogActivity.this, "你是上单", Toast.LENGTH_SHORT).show();
                                             break;
@@ -94,13 +90,12 @@ public class AlertDialogActivity extends AppCompatActivity {
                     break;
                 case R.id.aleartdialog3:
                     AlertDialog.Builder builder2 = new AlertDialog.Builder(AlertDialogActivity.this);
-                    String item2[] = {"上","中","下"};
+                    String item2[] = {"上", "中", "下"};
                     builder2.setTitle("你打哪一路？")
                             .setSingleChoiceItems(item2, 0, new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
-                                    switch(which)
-                                    {
+                                    switch (which) {
                                         case 0:
                                             Toast.makeText(AlertDialogActivity.this, "你是上单", Toast.LENGTH_SHORT).show();
                                             dialog.dismiss();//点击选项消失
@@ -121,24 +116,23 @@ public class AlertDialogActivity extends AppCompatActivity {
                     break;
                 case R.id.aleartdialog4:
                     AlertDialog.Builder builder3 = new AlertDialog.Builder(AlertDialogActivity.this);
-                    String item3[] = {"上","中","下"};
-                    boolean check[] ={true, false,false};
+                    String item3[] = {"上", "中", "下"};
+                    boolean check[] = {true, false, false};
                     builder3.setTitle("你打哪一路？")
-                            .setMultiChoiceItems(item3,check , new DialogInterface.OnMultiChoiceClickListener() {
+                            .setMultiChoiceItems(item3, check, new DialogInterface.OnMultiChoiceClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which, boolean isChecked) {
-                                    switch(which)
-                                    {
+                                    switch (which) {
                                         case 0:
-                                            if(isChecked)
+                                            if (isChecked)
                                                 Toast.makeText(AlertDialogActivity.this, "你是上单", Toast.LENGTH_SHORT).show();
                                             break;
                                         case 1:
-                                            if(isChecked)
+                                            if (isChecked)
                                                 Toast.makeText(AlertDialogActivity.this, "你是中单", Toast.LENGTH_SHORT).show();
                                             break;
                                         case 2:
-                                            if(isChecked)
+                                            if (isChecked)
                                                 Toast.makeText(AlertDialogActivity.this, "你是ADC", Toast.LENGTH_SHORT).show();
                                             break;
                                     }

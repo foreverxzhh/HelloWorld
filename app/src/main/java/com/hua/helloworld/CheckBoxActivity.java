@@ -9,6 +9,7 @@ import android.widget.Toast;
 public class CheckBoxActivity extends AppCompatActivity {
 
     private CheckBox cb1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,7 +18,7 @@ public class CheckBoxActivity extends AppCompatActivity {
         cb1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                Toast.makeText(CheckBoxActivity.this, isChecked?"is checked":"not checked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(CheckBoxActivity.this, isChecked ? "is checked" : "not checked", Toast.LENGTH_SHORT).show();
             }
         });
     }

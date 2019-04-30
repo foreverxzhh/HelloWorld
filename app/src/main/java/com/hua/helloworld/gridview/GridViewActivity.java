@@ -21,13 +21,13 @@ public class GridViewActivity extends AppCompatActivity {
         gv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(GridViewActivity.this, "点击pos："+ position, Toast.LENGTH_SHORT).show();
+                Toast.makeText(GridViewActivity.this, "点击pos：" + position, Toast.LENGTH_SHORT).show();
             }
         });
         gv.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(GridViewActivity.this, "长按pos："+ position, Toast.LENGTH_SHORT).show();
+                Toast.makeText(GridViewActivity.this, "长按pos：" + position, Toast.LENGTH_SHORT).show();
                 return true;
             }
         });

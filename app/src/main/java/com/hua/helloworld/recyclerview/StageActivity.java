@@ -14,6 +14,7 @@ import com.hua.helloworld.R;
 public class StageActivity extends AppCompatActivity {
 
     RecyclerView rv;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,7 +25,7 @@ public class StageActivity extends AppCompatActivity {
             @Override
             public void getItemOffsets(@NonNull Rect outRect, @NonNull View view, @NonNull RecyclerView parent, @NonNull RecyclerView.State state) {
                 super.getItemOffsets(outRect, view, parent, state);
-                outRect.set(1,1,1,1);
+                outRect.set(1, 1, 1, 1);
             }
         });
         rv.setAdapter(new StageAdapter(this, new StageAdapter.OnItemClickListener() {

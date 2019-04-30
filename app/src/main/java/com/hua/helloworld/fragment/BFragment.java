@@ -15,11 +15,10 @@ public class BFragment extends Fragment {
 
     TextView tv;
 
-    public static BFragment getInstance(String string)
-    {
+    public static BFragment getInstance(String string) {
         BFragment bFragment = new BFragment();
         Bundle bundle = new Bundle();
-        bundle.putString("title",string);
+        bundle.putString("title", string);
         bFragment.setArguments(bundle);
         return bFragment;
     }
@@ -27,14 +26,14 @@ public class BFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_b,null);
+        return inflater.inflate(R.layout.fragment_b, null);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         tv = view.findViewById(R.id.tv);
-        if(getArguments() != null)
+        if (getArguments() != null)
             tv.setText(getArguments().getString("title"));
     }
 }

@@ -13,8 +13,8 @@ import android.widget.Toast;
 
 public class ProgressActivity extends AppCompatActivity {
 
-    ProgressBar p1,p2;
-    Button download,progressdialog1, progressdialog2;
+    ProgressBar p1, p2;
+    Button download, progressdialog1, progressdialog2;
     ProgressDialog pd, pd2;
 
     @Override
@@ -63,18 +63,14 @@ public class ProgressActivity extends AppCompatActivity {
         });
     }
 
-    Handler handler = new Handler()
-    {
+    Handler handler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
-            if(p2.getProgress()<100)
-            {
-                if(p2.getSecondaryProgress()<100)
-                {
-                    p2.setSecondaryProgress(p2.getSecondaryProgress()+10);
-                }
-                else {
+            if (p2.getProgress() < 100) {
+                if (p2.getSecondaryProgress() < 100) {
+                    p2.setSecondaryProgress(p2.getSecondaryProgress() + 10);
+                } else {
                     p2.setSecondaryProgress(0);
                     p2.setProgress(p2.getProgress() + 1);
                 }
@@ -84,26 +80,20 @@ public class ProgressActivity extends AppCompatActivity {
                         handler.sendEmptyMessage(0);
                     }
                 }, 100);
-            }
-            else
-            {
+            } else {
                 Toast.makeText(ProgressActivity.this, "下载完毕", Toast.LENGTH_SHORT).show();
             }
         }
     };
 
-    Handler handler2 = new Handler()
-    {
+    Handler handler2 = new Handler() {
         @Override
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
-            if(pd2.getProgress()<100)
-            {
-                if(pd2.getSecondaryProgress()<100)
-                {
-                    pd2.setSecondaryProgress(pd2.getSecondaryProgress()+10);
-                }
-                else {
+            if (pd2.getProgress() < 100) {
+                if (pd2.getSecondaryProgress() < 100) {
+                    pd2.setSecondaryProgress(pd2.getSecondaryProgress() + 10);
+                } else {
                     pd2.setSecondaryProgress(0);
                     pd2.setProgress(pd2.getProgress() + 1);
                 }
@@ -113,9 +103,7 @@ public class ProgressActivity extends AppCompatActivity {
                         handler2.sendEmptyMessage(0);
                     }
                 }, 100);
-            }
-            else
-            {
+            } else {
                 Toast.makeText(ProgressActivity.this, "下载完毕", Toast.LENGTH_SHORT).show();
             }
         }
