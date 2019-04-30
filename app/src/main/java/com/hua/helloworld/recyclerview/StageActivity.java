@@ -39,5 +39,6 @@ public class StageActivity extends AppCompatActivity {
                 Toast.makeText(StageActivity.this, "长按pos：" + pos, Toast.LENGTH_SHORT).show();
             }
         }));
+        rv.setItemViewCacheSize(100);//解决因为ViewHolder复用导致的高度错乱问题
     }
 }
