@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.hua.helloworld.RxJava.RxJavaActivity;
 import com.hua.helloworld.fragment.ContainerActivity;
 import com.hua.helloworld.gridview.GridViewActivity;
 import com.hua.helloworld.listview.ListViewActivity;
@@ -21,7 +22,7 @@ import com.hua.helloworld.storage.StorageActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button textview, button, edittext, radiobutton, checkbox, imageview, listview, gridview, webview, recyclerview, toast, alertdialog, progress, dialog, popup, fragment, storage, storage2, storage3;
+    private Button textview, button, edittext, radiobutton, checkbox, imageview, listview, gridview, webview, recyclerview, toast, alertdialog, progress, dialog, popup, fragment, storage, storage2, storage3, RxJava;
     private long time = 0;
 
     @Override
@@ -47,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         storage = findViewById(R.id.storage);
         storage2 = findViewById(R.id.storage2);
         storage3 = findViewById(R.id.storage3);
+        RxJava = findViewById(R.id.RxJava);
         setOnClickListener();
         ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
     }
@@ -72,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
         storage.setOnClickListener(mOnclickListener);
         storage2.setOnClickListener(mOnclickListener);
         storage3.setOnClickListener(mOnclickListener);
+        RxJava.setOnClickListener(mOnclickListener);
     }
 
     private class onClickListener implements View.OnClickListener {
@@ -136,6 +139,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.storage3:
                     intent = new Intent(MainActivity.this, Storage3Activity.class);
+                    break;
+                case R.id.RxJava:
+                    intent = new Intent(MainActivity.this, RxJavaActivity.class);
                     break;
             }
             startActivity(intent);
